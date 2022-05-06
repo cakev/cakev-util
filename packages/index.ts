@@ -9,10 +9,5 @@ const util = {
 	uuid,
 	versionToNum,
 }
-if (window !== undefined) {
-	if (!window['cakeV-util']) {
-		window['cakeV-util'] = util
-	}
-}
 export { version, on, off, uuid, versionToNum, getQueryString }
 export default util
