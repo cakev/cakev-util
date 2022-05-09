@@ -20,24 +20,6 @@ module.exports = {
 	},
 	configureWebpack: config => {
 		config.resolve.extensions = ['.js', '.vue', '.json', '.ts', '.tsx']
-		if (process.env.VUE_APP_BUILD_MODE === 'NPM') {
-			config.externals = [
-				{
-					vue: {
-						root: 'Vue',
-						commonjs: 'vue',
-						commonjs2: 'vue',
-						amd: 'vue',
-					},
-				},
-			]
-		} else {
-			config.externals = [
-				{
-					vue: 'Vue',
-				},
-			]
-		}
 	},
 	chainWebpack: config => {
 		config.plugin('define').tap(args => {
