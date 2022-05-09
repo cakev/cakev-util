@@ -7,6 +7,7 @@ module.exports = {
 			entry: './play/main.ts',
 		},
 	},
+	productionSourceMap: false,
 	assetsDir: './',
 	devServer: {
 		port: 3000,

@@ -3,9 +3,7 @@ module.exports = {
 	env: {
 		node: true,
 	},
-	globals: {
-		echarts: true,
-	},
+	globals: {},
 	extends: [
 		'plugin:vue/essential',
 		'eslint:recommended',

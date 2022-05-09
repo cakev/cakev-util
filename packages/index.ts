@@ -1,4 +1,4 @@
-import { on, off } from './dom'
+import { on, off, once } from './dom'
 import { uuid, versionToNum, getQueryString } from './other'
 import { findComponentDownward, findComponentUpward, findComponentsDownward } from './vue'
 
@@ -7,6 +7,7 @@ const util = {
 	version,
 	on,
 	off,
+	once,
 	uuid,
 	versionToNum,
 	findComponentDownward,
@@ -17,6 +18,7 @@ export {
 	version,
 	on,
 	off,
+	once,
 	uuid,
 	versionToNum,
 	getQueryString,
