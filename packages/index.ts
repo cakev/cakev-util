@@ -1,6 +1,6 @@
 import { on, off } from './dom'
 import { uuid, versionToNum, getQueryString } from './other'
-import { findComponentDownward, findComponentUpward } from './vue'
+import { findComponentDownward, findComponentUpward, findComponentsDownward } from './vue'
 
 const version = process.env.version
 const util = {
@@ -11,6 +11,17 @@ const util = {
 	versionToNum,
 	findComponentDownward,
 	findComponentUpward,
+	findComponentsDownward,
 }
-export { version, on, off, uuid, versionToNum, getQueryString, findComponentDownward, findComponentUpward }
+export {
+	version,
+	on,
+	off,
+	uuid,
+	versionToNum,
+	getQueryString,
+	findComponentDownward,
+	findComponentUpward,
+	findComponentsDownward,
+}
 export default util

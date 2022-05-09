@@ -34,3 +34,19 @@ export const findComponentDownward = (context, componentName) => {
 	}
 	return children
 }
+
+// Find components downward
+export const findComponentsDownward = (context, componentName, ignoreComponentNames = []) => {
+	if (!Array.isArray(ignoreComponentNames)) {
+		ignoreComponentNames = [ignoreComponentNames]
+	}
+	return context.$children.reduce((components, child) => {
+		if (child.$options.name === componentName) components.push(child)
+		if (ignoreComponentNames.indexOf(child.$options.name) < 0) {
+			const foundChilds = findComponentsDownward(child, componentName)
+			return components.concat(foundChilds)
+		} else {
+			return components
+		}
+	}, [])
+}
