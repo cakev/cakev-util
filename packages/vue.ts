@@ -1,4 +1,6 @@
-// Find components upward
+/**
+ * @description Find components upward
+ */
 export const findComponentUpward = (context, componentName, componentNames) => {
 	if (typeof componentName === 'string') {
 		componentNames = [componentName]
@@ -15,7 +17,9 @@ export const findComponentUpward = (context, componentName, componentNames) => {
 	return parent
 }
 
-// Find component downward
+/**
+ * @description Find component downward
+ */
 export const findComponentDownward = (context, componentName) => {
 	const childrens = context.$children
 	let children = null
@@ -35,7 +39,9 @@ export const findComponentDownward = (context, componentName) => {
 	return children
 }
 
-// Find components downward
+/**
+ * @description Find components downward
+ */
 export const findComponentsDownward = (context, componentName, ignoreComponentNames = []) => {
 	if (!Array.isArray(ignoreComponentNames)) {
 		ignoreComponentNames = [ignoreComponentNames]
