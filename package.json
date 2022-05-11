@@ -8,6 +8,7 @@
 		"commit": "git add .&&git cz"
 	},
 	"dependencies": {
+		"clipboard": "^2.0.11",
 		"vue": "^2.6.14"
 	},
 	"devDependencies": {

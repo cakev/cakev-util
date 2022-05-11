@@ -1,5 +1,5 @@
 import { on, off, once } from './dom'
-import { uuid, versionToNum, getQueryString, downloadFile } from './other'
+import { uuid, versionToNum, getQueryString, downloadFile, copyText } from './other'
 import { findComponentDownward, findComponentUpward, findComponentsDownward } from './vue'
 
 const version = process.env.version
@@ -12,6 +12,7 @@ const util = {
 	versionToNum,
 	getQueryString,
 	downloadFile,
+	copyText,
 	findComponentDownward,
 	findComponentUpward,
 	findComponentsDownward,
@@ -25,6 +26,7 @@ export {
 	versionToNum,
 	getQueryString,
 	downloadFile,
+	copyText,
 	findComponentDownward,
 	findComponentUpward,
 	findComponentsDownward,
