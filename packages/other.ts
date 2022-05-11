@@ -1,5 +1,3 @@
-import Clipboard from 'clipboard'
-
 /**
  * @description uuid
  */
@@ -45,7 +43,7 @@ const types = {
  * 文件下载函数
  * @description 文件下载函数
  */
-export const downloadFile = (data, filename, type) => {
+export const downloadFile = (data, filename, type): void => {
 	let blob
 	if (typeof data === 'string') {
 		blob = new Blob([data], { type: types[type] })
@@ -64,26 +62,4 @@ export const downloadFile = (data, filename, type) => {
 	link.href = url
 	link.click()
 	URL.revokeObjectURL(url)
-}
-
-/**
- * @description 拷贝插件 kay
- */
-export function copyText(text, success, error) {
-	const oCopyBtn = document.createElement('button')
-	oCopyBtn.setAttribute('id', 'cake-copy-btn')
-	oCopyBtn.setAttribute('data-clipboard-text', text)
-	document.body.appendChild(oCopyBtn)
-	const clipboard = new Clipboard('#cake-copy-btn')
-	clipboard.on('success', e => {
-		typeof success === 'function' && success(e)
-		clipboard.destroy()
-		document.body.removeChild(oCopyBtn)
-	})
-	clipboard.on('error', e => {
-		typeof error === 'function' && error(e)
-		clipboard.destroy()
-		document.body.removeChild(oCopyBtn)
-	})
-	oCopyBtn.click()
 }
