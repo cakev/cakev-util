@@ -26,5 +26,4 @@ jobs:
             - name: Publish
               with:
                   registry-url: https://npm.pkg.github.com/
-              run: |
-                npm publish
+              run: npm publish
