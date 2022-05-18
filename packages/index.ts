@@ -37,4 +37,11 @@ export {
 	findComponentUpward,
 	findComponentsDownward,
 }
+
+if (window !== undefined) {
+	if (!window['cakeV-util']) {
+		window['cakeV-util'] = util
+	}
+}
+
 export default util
